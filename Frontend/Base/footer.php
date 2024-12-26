@@ -39,7 +39,7 @@
   </footer>
   <!-- Footer End -->
 
-  <script src="script.js"></script>
+  <script src="./js/script.js"></script>
 
   <!-- Flickity JS Link -->
   <script src="https://unpkg.com/flickity@2.2.2/dist/flickity.pkgd.min.js"></script>

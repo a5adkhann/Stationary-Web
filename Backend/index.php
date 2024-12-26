@@ -11,6 +11,8 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
 </head>
 <body>
     <div class="container">
@@ -19,7 +21,7 @@
                 <img src="./logo/stationary.png" alt="">
             </div>
             <ul> 
-                <li class="active"> <span><i class="fa-solid fa-list"></i> <a href=""> Categories </a></span> <span><i id="sidebar-link-toggle" class="fa-solid fa-circle"></i> </span> </li>
+                <li class="active"> <span><i class="fa-solid fa-list"></i> <a href=""> Categories </a></span> <span><i id="sidebar-link-toggle" class="fa-solid fa-arrow-right"></i> </span> </li>
                 <div id="dropdown-item" class="hide">
                     <p>Add Category</p>
                     <p>View Category</p>
@@ -27,14 +29,20 @@
                 <li> <i class="fa-brands fa-product-hunt"></i> <a href=""> Products </a></li>
                 <li> <i class="fa-solid fa-right-to-bracket"></i> <a href=""> Login </a></li>
                 <li> <i class="fa-solid fa-registered"></i> <a href=""> Register </a></li>
+                
+                <li style="position: absolute; bottom: 30px;"> <i class="fa-solid fa-right-to-bracket"></i> <a href=""> Logout </a></li>
             </ul>
         </div>
 
         <div class="main-section">
             <h1>Welcome to Stationary Web Backend</h1>
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
         </div>
     </div>
 
+    <script>
+       
+        </script>
 
     <script src="./js/script.js"></script>
 </body>
