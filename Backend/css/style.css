@@ -19,7 +19,7 @@ body {
 .container .sidebar {
     background-color: #F0F1F3;
     height: 100vh;
-    width: 25%;
+    width: 19%;
     padding: 30px 0px;
     display: flex;
     flex-direction: column;
@@ -44,6 +44,8 @@ body {
     padding: 8px 20px;
     transition: background 0.2s ease-in-out;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 
 .container .sidebar ul li:hover {
@@ -68,7 +70,7 @@ body {
 
 .container .main-section {
     padding: 30px 40px;
-    width: 100%;
+    width: 75%;
 }
 
 #dropdown-item {
@@ -78,4 +80,25 @@ body {
 
 .hide {
     display: none;
+}
+
+#catField {
+    width: 100%;
+    height: 35px;
+    outline: none;
+    padding-left: 20px;
+    border: none;
+    background: #F0F1F3;
+}
+
+#form-divider {
+    margin-top: 20px;
+}
+
+#catSubmitBtn {
+    background: #333;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }
