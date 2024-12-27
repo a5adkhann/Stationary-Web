@@ -34,7 +34,7 @@ require("./db/db_integration.php");
                 </div>
                 <li> <span><i class="fa-brands fa-product-hunt"></i> <a href=""> Products </a></span> <span><i id="sidebar-link-toggle" class="fa-solid fa-arrow-right"></i> </span> </li>
                 <div id="dropdown-item" class="hide">
-                    <p>Add Product</p>
+                    <p><a href="./addProduct.php">Add Product</a></p>
                     <p>View Product</p>
                 </div>
                 <li> <span><i class="fa-solid fa-right-to-bracket"></i> <a href=""> Login </a></span></li>

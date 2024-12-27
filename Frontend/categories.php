@@ -1,0 +1,37 @@
+
+<?php
+require("../Backend/db/db_integration.php");
+
+if (basename($_SERVER['PHP_SELF']) == 'categories.php') {
+  require("./Base/header.php");
+}
+
+?>
+
+
+<!-- Categories Start -->
+ <div class="categories">
+ <?php
+  $select_query = "SELECT * FROM `categories`";
+  $result = mysqli_query($db_connection, $select_query);
+  while($display = mysqli_fetch_array($result)){
+ ?>
+ <div class="category">
+      <div class="category-img">
+        <img src="./images/categories/pens.png" alt="" />
+      </div>
+      <div class="category-text">
+        <h3 class="category-title"><?php echo $display['category_name']?></h3>
+      </div>
+ </div>
+ <?php
+ }
+ ?>
+  </div>
+  <!-- Categories End -->
+
+  <?php
+  if (basename($_SERVER['PHP_SELF']) == 'categories.php') {
+    require("./Base/footer.php");
+  }
+  ?>

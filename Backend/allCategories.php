@@ -3,7 +3,8 @@ require("./base/header.php");
 ?>
 
 <div class="main-section">
-    <table border="1" cellspacing="0" cellpadding="30" width="100%" height="100px">
+    <h1>All Categories</h1>
+    <table class="table" cellspacing="0" width="100%" height="100px">
         <tr>
             <th>S No</th>
             <th>Category Name</th>
@@ -24,7 +25,7 @@ require("./base/header.php");
             <td><?php echo $display['category_image']?></td>
             <td>
                 <a href="">Update</a>
-                <a href="">Delete</a>
+                <a href="./logics.php?deleteCategory=<?php echo $display['category_id']?>">Delete</a>
             </td>
         </tr>
         <?php

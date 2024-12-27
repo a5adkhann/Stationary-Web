@@ -82,7 +82,7 @@ body {
     display: none;
 }
 
-#catField {
+#catField, #prodField {
     width: 100%;
     height: 35px;
     outline: none;
@@ -101,4 +101,9 @@ body {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+}
+
+.table {
+    border: 1px solid gray;
+    text-align: center;
 }

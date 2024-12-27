@@ -21,7 +21,7 @@ require("./base/header.php");
     </div>
 
     <div id="form-divider">
-    <input type="submit" id="catSubmitBtn" name="addCategory">
+    <input type="submit" id="catSubmitBtn" value="ADD" name="addCategory">
     </div>
 </form>
 </div>

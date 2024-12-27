@@ -19,15 +19,15 @@
   <header>
     <nav class="navbar desktop">
       <div class="navbar-logo">
-        <a href="index.html">
+        <a href="index.php">
           <img src="./images/stationary.png" alt="" />
         </a>
       </div>
       <div>
         <ul class="navbar-items">
           <li class="active"><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Services</a></li>
+          <li><a href="./categories.php">Categories</a></li>
+          <li><a href="./products.php">Products</a></li>
           <li><a href="">Contact</a></li>
         </ul>
       </div>
