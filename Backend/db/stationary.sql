@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 27, 2024 at 11:42 AM
+-- Generation Time: Dec 27, 2024 at 10:46 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -62,7 +62,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `product_name`, `product_price`, `product_description`, `product_image`) VALUES
-(1, 'Art Pencil', '$12', 'An art pencil is a delicate yet powerful tool that brings imagination to life on paper. It allows artists to sketch, shade, and create intricate details with precision and grace. Whether its the soft lines of a portrait or the bold strokes of a landscape, ', 'product1.jpg'),
+(1, 'Art Pencil', '12', 'An art pencil is a delicate yet powerful tool that brings imagination to life on paper. It allows artists to sketch, shade, and create intricate details with precision and grace. Whether its the soft lines of a portrait or the bold strokes of a landscape, ', 'product1.jpg'),
 (2, 'Desk Organizers', '35', 'Desk organizers are essential tools that bring order to the chaos of a busy workspace. They keep pens, papers, notebooks, and other essentials neatly arranged, making it easier to stay focused and productive. With their smart compartments and stylish desig', 'product2.jpg'),
 (3, 'Paint Brushes ', '55', 'Paint brushes are the artists trusted companions, turning blank surfaces into vibrant expressions of creativity. Each brush, with its unique shape and size, brings different textures and strokes to life, from delicate details to bold, sweeping lines. They ', 'product3.jpg');
 
@@ -90,13 +90,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
