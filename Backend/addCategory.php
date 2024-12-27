@@ -3,8 +3,12 @@ require("./base/header.php");
 ?>
 
 <div class="main-section">
+<div class="dataInsertion-header">
 <h1>Add Category</h1>
-<form method="POST" action="logics.php">
+<a href="javascript:void(0)" onclick="window.history.back()">Back</a>
+</div>
+
+<form method="POST" action="logics.php" enctype="multipart/form-data">
 <div id="form-divider">
     <label for="">Category Name:</label>
     <input type="text" id="catField" name="cat_name">

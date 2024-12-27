@@ -8,7 +8,8 @@
 }
 
 body {
-    background: #FFF;
+    background: #171821;
+    color: #FFF;
 }
 
 .container {
@@ -17,7 +18,7 @@ body {
 }
 
 .container .sidebar {
-    background-color: #F0F1F3;
+    background-color: #21222D;
     height: 100vh;
     width: 19%;
     padding: 30px 0px;
@@ -42,30 +43,31 @@ body {
 
 .container .sidebar ul li {
     padding: 8px 20px;
-    transition: background 0.2s ease-in-out;
+    transition: background 0.3s ease-in-out, filter 0.2s ease-in-out;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
 }
 
 .container .sidebar ul li:hover {
-    background: #EE3038;
-    color: #FFF;
+    background: #171821;
+}
+
+.container .sidebar ul li:last-child:hover {
+    background: none;
 }
 
 .active {
-    background: #EE3038;
+    background: #171821;
+    color: #FFF;
     display: flex;
     justify-content: space-between;
 }
 
-.container .sidebar ul li i {
-    color: #333;
-}
 
 .container .sidebar ul li a {
     text-decoration: none;
-    color: #333;
+    color: #FFF;
 }
 
 .container .main-section {
@@ -78,6 +80,16 @@ body {
     gap: 40px;
 }
 
+#dropdown-item a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+#dropdown-item a:hover {
+    background: #171821;
+    text-decoration: none;
+}
+
 .hide {
     display: none;
 }
@@ -88,7 +100,9 @@ body {
     outline: none;
     padding-left: 20px;
     border: none;
-    background: #F0F1F3;
+    background: #21222D;
+    color: #FFF;
+    font-size: 15px;
 }
 
 #form-divider {
@@ -96,7 +110,7 @@ body {
 }
 
 #catSubmitBtn {
-    background: #333;
+    background: #21222D;
     color: #FFF;
     border: none;
     padding: 10px 20px;
@@ -104,6 +118,39 @@ body {
 }
 
 .table {
-    border: 1px solid gray;
+    border-collapse: collapse;
     text-align: center;
+}
+
+.table tr th,td {
+    padding: 10px;
+}
+
+.table tr th {
+    font-weight: 500;
+}
+
+.table tr:first-child {
+    background: #21222D;
+}
+.table tr {
+    border-bottom: 1px solid #21222D;
+}
+
+.actionBtn {
+    color: #FFF;
+    background: #21222D;
+    padding: 3px 10px;
+} 
+
+.dataDisplay-header, .dataInsertion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dataInsertion-header a, .dataDisplay-header a {
+    text-decoration: none;
+    color: #FFF;
+    border-bottom: 5px solid #21222D;
 }

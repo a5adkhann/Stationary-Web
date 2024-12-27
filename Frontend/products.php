@@ -21,7 +21,7 @@ if(basename($_SERVER['PHP_SELF']) == "products.php"){
   ?>
   <div class="product">
       <div class="product-img">
-        <img src="./images/products/product1.jpg" alt="" />
+        <img src="../Backend/uploads/productUploads/<?php echo $display['product_image']?>" alt="" />
       </div>
 
       <div class="product-text">

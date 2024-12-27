@@ -4,7 +4,7 @@ require("./base/header.php");
 
 <div class="main-section">
 <h1>Add Product</h1>
-<form method="POST" action="logics.php">
+<form method="POST" action="logics.php" enctype="multipart/form-data">
 <div id="form-divider">
     <label for="">Product Name:</label>
     <input type="text" id="prodField" name="prod_name">
