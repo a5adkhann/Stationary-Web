@@ -3,8 +3,9 @@ require("../Backend/db/db_integration.php");
 
 if(basename($_SERVER['PHP_SELF']) == "products.php"){
   require_once("./base/header.php");
+?>
+<?php
 }
-
 ?>
 
 <!-- Products Start -->

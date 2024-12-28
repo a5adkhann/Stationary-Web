@@ -18,7 +18,7 @@ if (basename($_SERVER['PHP_SELF']) == 'categories.php') {
  ?>
  <div class="category">
       <div class="category-img">
-        <img src="../Backend/uploads/<?php echo $display['category_image']?>" width="250" alt="" />
+        <img src="../Backend/uploads/categoryUploads/<?php echo $display['category_image']?>" width="250" alt="" />
       </div>
       <div class="category-text">
         <h3 class="category-title"><?php echo $display['category_name']?></h3>

@@ -3,7 +3,11 @@ require("./base/header.php");
 ?>
 
 <div class="main-section">
+<div class="dataInsertion-header">
 <h1>Add Product</h1>
+<a href="javascript:void(0)" onclick="window.history.back()">Back</a>
+</div>
+
 <form method="POST" action="logics.php" enctype="multipart/form-data">
 <div id="form-divider">
     <label for="">Product Name:</label>

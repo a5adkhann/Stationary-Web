@@ -4,7 +4,6 @@ let cartIcon = document.getElementById("cart-icon");
 let cart = document.getElementById("cart");
 let closeIcon = document.getElementById("close-icon");
 
-
 hamburgerIcon.addEventListener("click", () => {
     if(mobileNavbar){
     mobileNavbar.classList.toggle("hide");

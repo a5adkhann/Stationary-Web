@@ -35,8 +35,8 @@ require("./base/header.php");
             </td>
             <td><img src="./uploads/productUploads/<?php echo $display['product_image']?>" width="70" alt=""></td>
             <td>
-                <a class="actionBtn" href=""><i class="fa-regular fa-pen-to-square"></i></a>
-                <a class="actionBtn" href="./logics.php?deleteProduct=<?php echo $display['product_id']?>"><i class="fa-solid fa-trash"></i></a>
+                <a style="color: #12CEC8" class="actionBtn" href=""><i class="fa-regular fa-pen-to-square"></i></a>
+                <a class="actionBtn" href="./logics.php?deleteProduct=<?php echo $display['product_id']?>"><i style="color: #FC0037" class="fa-solid fa-trash"></i></a>
             </td>
         </tr>
         <?php

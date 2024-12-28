@@ -27,17 +27,17 @@ require("./db/db_integration.php");
                 </a>
             </div>
             <ul> 
-                <li class="active"> <span><i class="fa-solid fa-list"></i> <a href=""> Categories </a></span> <span><i id="sidebar-link-toggle" class="fa-solid fa-arrow-right"></i> </span> </li>
-                <div id="dropdown-item" class="hide">
+                <li class="active"> <span><i class="fa-solid fa-list"></i> <a href=""> Categories </a></span> <span><i class="sidebar-link-toggle fa-solid fa-arrow-right"></i> </span> </li>
+                <div class="dropdown-item hide">
                     <p><a href="./addCategory.php">Add Category</a></p>
                     <p><a href="./allCategories.php">View Category</a></p>
                 </div>
-                <li> <span><i style="color: #FFF;" class="fa-brands fa-product-hunt"></i> <a style="color: #FFF;" href=""> Products </a></span> <span><i  style="color: #FFF;" id="sidebar-link-toggle" class="fa-solid fa-arrow-right"></i> </span> </li>
-                <div id="dropdown-item" class="hide">
+                <li> <span><i style="color: #FFF;" class="fa-brands fa-product-hunt"></i> <a style="color: #FFF;" href=""> Products </a></span> <span><i  style="color: #FFF;" class="sidebar-link-toggle fa-solid fa-arrow-right"></i> </span> </li>
+                <div class="dropdown-item hide">
                     <p><a href="./addProduct.php">Add Product</a></p>
-                    <p>View Product</p>
+                    <p><a href="./allProducts.php">View Product</a></p>
                 </div>
-                <li> <span><i style="color: #FFF;" class="fa-solid fa-right-to-bracket"></i> <a style="color: #FFF;" href=""> Login </a></span></li>
+                <li> <span><i style="color: #FFF;" class="fa-solid fa-right-to-bracket"></i> <a style="color: #FFF;" href="./signin.php"> Login </a></span></li>
                 <li> <span><i style="color: #FFF;" class="fa-solid fa-registered"></i> <a style="color: #FFF;" href=""> Register </a></span></li>
                 
                 <li style="position: absolute; bottom: 10px;"> <span><i style="color: #FC003C;" class="fa-solid fa-right-to-bracket"></i> <a style="color: #FC003C;" href=""> Logout </a></span></li>

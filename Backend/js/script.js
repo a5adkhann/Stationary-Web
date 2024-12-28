@@ -1,21 +1,24 @@
-let sidebarLinkToggle = document.getElementById("sidebar-link-toggle");
-let dropdownItem = document.getElementById("dropdown-item");
+let sidebarLinkToggles = document.querySelectorAll(".sidebar-link-toggle");
+let dropdownItems = document.querySelectorAll(".dropdown-item");
 
-sidebarLinkToggle.classList.add("fa-arrow-right");
+sidebarLinkToggles.forEach((toggle, index) => {
+  toggle.classList.add("fa-arrow-right"); 
 
-sidebarLinkToggle.addEventListener("click", () => {
-    if (dropdownItem) {
-        dropdownItem.classList.toggle("hide");
-        
-        if (sidebarLinkToggle.classList.contains("fa-arrow-right")) {
-            sidebarLinkToggle.classList.remove("fa-arrow-right");
-            sidebarLinkToggle.classList.add("fa-arrow-down");
-        } else {
-            sidebarLinkToggle.classList.remove("fa-arrow-down");
-            sidebarLinkToggle.classList.add("fa-arrow-right");
-        }
-    }
+  toggle.addEventListener("click", () => {
+      let dropdownItem = dropdownItems[index]; 
+
+      dropdownItem.classList.toggle("hide");
+
+      if (toggle.classList.contains("fa-arrow-right")) {
+          toggle.classList.remove("fa-arrow-right");
+          toggle.classList.add("fa-arrow-down");
+      } else {
+          toggle.classList.remove("fa-arrow-down");
+          toggle.classList.add("fa-arrow-right");
+      }
+  });
 });
+
 
 // Chart Logics
 var xValues = ["Category", "Products", "Total Revenue", "Total Registrations"];
