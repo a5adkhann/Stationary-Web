@@ -3,35 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Sign Up - Stationary Web</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div>
-        <form class="signup-form-parent">
+        <form action="logics.php" class="signup-form-parent" method="POST">
             <h1 class="signin-title">Sign Up</h1>
             <div id="form-divider">
                 <label>Name</label>
-                <input type="text" id="signupField" name="name" required placeholder="Enter your email">
+                <input type="text" id="signupField" name="user_name" required placeholder="Enter your name">
             </div>
 
             <div id="form-divider">
                 <label>Email</label>
-                <input type="email" id="signupField" name="email" required placeholder="Enter your email">
+                <input type="email" id="signupField" name="user_email" required placeholder="Enter your email">
             </div>
 
             <div id="form-divider">
                 <label>Password</label>
-                <input type="password" id="signupField" name="password" required placeholder="Enter your password">
+                <input type="password" id="signupField" name="user_password" required placeholder="Enter your password">
             </div>
 
             <div id="form-divider">
                 <label>Confirm Password</label>
-                <input type="password" id="signupField" name="cpassword" required placeholder="Enter your password">
+                <input type="password" id="signupField" name="user_cpassword" required placeholder="Enter your password again">
             </div>
 
             <div id="form-divider">
-                <button id="signupBtn" type="submit">Sign Up</button>
+                <button id="signupBtn" type="submit" name="signup">Sign Up</button>
             </div>
 
             <div id="form-divider">

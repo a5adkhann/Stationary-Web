@@ -30,6 +30,22 @@ require("./base/header.php");
     </div>
 
     <div id="form-divider">
+    <label for="">Product Category:</label>
+    <select id="prodField" name="prod_category">
+        <option value="">---</option>
+        <?php
+        $select_query = "SELECT * FROM `categories`";
+        $result = mysqli_query($db_connection, $select_query);
+        while($display = mysqli_fetch_array($result)){
+        ?>
+            <option value="<?php echo $display['category_id']?>"><?php echo $display['category_name']?></option>
+        <?php
+}
+?>
+    </select>
+    </div>
+
+    <div id="form-divider">
     <input type="submit" id="catSubmitBtn" value="ADD" name="addProduct">
     </div>
 </form>

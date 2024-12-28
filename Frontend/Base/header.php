@@ -46,10 +46,10 @@
 
       <div>
         <ul class="navbar-mobile-items">
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Contact</a></li>
+        <li class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : '')?>"><a href="./index.php">Home</a></li>
+              <li class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'categories.php' ? 'active' : '')?>"><a href="./categories.php">Categories</a></li>
+              <li class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'products.php' ? 'active' : '')?>"><a href="./products.php">Products</a></li>
+              <li class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : '')?>"><a href="">Contact</a></li>
         </ul>
       </div>
 

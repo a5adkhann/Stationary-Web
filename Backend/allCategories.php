@@ -5,7 +5,7 @@ require("./base/header.php");
 <div class="main-section">
     <div class="dataDisplay-header">
         <h1>All Categories</h1>
-        <a href="./addCategory.php"><span><i class="fa-regular fa-square-plus"></i></span>ADD</a>
+        <a href="./addCategory.php">ADD</a>
     </div>
     <table class="table" width="100%" cellpadding="10">
         <tr>
@@ -33,8 +33,8 @@ require("./base/header.php");
             </td>
             <td><img src="./uploads/categoryUploads/<?php echo $display['category_image']?>" width="70" alt=""></td>
             <td>
-                <a class="actionBtn" href=""><i class="fa-regular fa-pen-to-square"></i></a>
-                <a class="actionBtn" href="./logics.php?deleteCategory=<?php echo $display['category_id']?>"><i class="fa-solid fa-trash"></i></a>
+                <a style="color: #12CEC8" class="actionBtn" href=""><i class="fa-regular fa-pen-to-square"></i></a>
+                <a style="color: #FC0037" class="actionBtn" href="./logics.php?deleteCategory=<?php echo $display['category_id']?>"><i class="fa-solid fa-trash"></i></a>
             </td>
         </tr>
         <?php

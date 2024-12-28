@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 28, 2024 at 04:48 PM
+-- Generation Time: Dec 29, 2024 at 12:33 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -39,9 +39,9 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`category_id`, `category_name`, `category_description`, `category_image`) VALUES
-(5, 'Books', 'Books are magical companions that transport us to new worlds, fill our minds with knowledge, and spark our imagination. They are like silent friends, offering comfort, wisdom, and adventure whenever we open their pages. Through books, we can explore farawa', 'books.png'),
-(6, 'Pens', 'Pens are simple yet powerful tools that bring thoughts to life. They help us express our ideas, emotions, and creativity on paper, turning imagination into words and art. A pen can write stories, solve problems, or capture fleeting moments of inspiration. ', 'pens.png'),
-(7, 'Spray-Paint', 'Spray paint is a vibrant medium that turns walls, objects, and spaces into canvases of creativity. It’s a tool for artists to express bold ideas, adding color and life with every spray. Quick and versatile, spray paint is used in everything from graffiti a', 'spray-paint.png');
+(1, 'Books', 'Books are a timeless source of knowledge, inspiration, and entertainment, offering a gateway to new ideas and perspectives. They come in various forms, including fiction, non-fiction, poetry, and academic texts, catering to diverse interests and needs. Boo', 'books.png'),
+(2, 'Pens', 'Pens are versatile writing instruments that play a vital role in communication, creativity, and documentation. Available in various types, such as ballpoint, fountain, gel, and rollerball, pens cater to different preferences and writing styles. Known for t', 'pens.png'),
+(3, 'Spray-Paint', 'Spray paints are a popular and versatile form of paint that comes in an aerosol can, allowing for smooth, even application without the need for brushes or rollers. They are widely used in art, home improvement, automotive, and industrial applications due t', 'spray-paint.png');
 
 -- --------------------------------------------------------
 
@@ -54,17 +54,41 @@ CREATE TABLE `products` (
   `product_name` varchar(256) NOT NULL,
   `product_price` varchar(256) NOT NULL,
   `product_description` varchar(256) NOT NULL,
-  `product_image` varchar(256) NOT NULL
+  `product_image` varchar(256) NOT NULL,
+  `category_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`product_id`, `product_name`, `product_price`, `product_description`, `product_image`) VALUES
-(1, 'Art Pencil', '12', 'An art pencil is a delicate yet powerful tool that brings imagination to life on paper. It allows artists to sketch, shade, and create intricate details with precision and grace. Whether its the soft lines of a portrait or the bold strokes of a landscape, ', 'product1.jpg'),
-(2, 'Desk Organizers', '35', 'Desk organizers are essential tools that bring order to the chaos of a busy workspace. They keep pens, papers, notebooks, and other essentials neatly arranged, making it easier to stay focused and productive. With their smart compartments and stylish desig', 'product2.jpg'),
-(3, 'Paint Brushes ', '55', 'Paint brushes are the artists trusted companions, turning blank surfaces into vibrant expressions of creativity. Each brush, with its unique shape and size, brings different textures and strokes to life, from delicate details to bold, sweeping lines. They ', 'product3.jpg');
+INSERT INTO `products` (`product_id`, `product_name`, `product_price`, `product_description`, `product_image`, `category_id`) VALUES
+(1, 'Art Pencil', '10', 'Art pencils are specialized tools used by artists, illustrators, and designers for creating detailed and expressive drawings. They come in a range of hardness levels, from soft to hard, allowing for different shading techniques, fine lines, and varied text', 'product1.jpg', 2),
+(2, 'Desk Organizers', '25', 'A desk organizer is a practical and efficient tool designed to help keep workspaces tidy and well-organized. Typically made from materials like wood, plastic, or metal, desk organizers feature compartments and sections for storing pens, paper, notebooks, g', 'product2.jpg', 1),
+(3, 'Paint Brushes ', '27', 'Paint brushes are essential tools for applying paint to various surfaces, allowing for both precision and creativity in artistic and practical applications. They come in a variety of shapes, sizes, and bristle types, each designed for specific tasks, from ', 'product3.jpg', 3),
+(4, 'Office Calculators', '23', 'Office calculators are essential tools for performing a wide range of mathematical operations quickly and accurately in professional settings. They are commonly used for tasks such as basic arithmetic, budgeting, accounting, tax calculations, and financial', 'product5.jpg', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
+  `user_name` varchar(256) NOT NULL,
+  `user_email` varchar(256) NOT NULL,
+  `user_password` varchar(256) NOT NULL,
+  `user_cpassword` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_password`, `user_cpassword`) VALUES
+(1, 'abc', 'abc@gmail.com', '111', '111'),
+(2, 'admin', 'admin@gmail.com', '111', '111');
 
 --
 -- Indexes for dumped tables
@@ -83,6 +107,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`product_id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -90,13 +120,19 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

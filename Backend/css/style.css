@@ -116,11 +116,12 @@ body {
     padding: 10px 20px;
     cursor: pointer;
 }
-
 .table {
-    border-collapse: collapse;
-    text-align: center;
+    border-collapse: separate; 
+    border-spacing: 5px; 
+    text-align: center; 
 }
+
 
 .table tr th,td {
     padding: 10px;
@@ -161,7 +162,7 @@ body {
     border-bottom: 5px solid #21222D;
 }
  
-.signin-form-parent, .signup-form-parent {
+.signin-form-parent, .signup-form-parent, .logout-section {
     background: #21222D;
     padding: 2em;
     display: flex;
@@ -189,4 +190,34 @@ body {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+}
+
+#searchField {
+    width: 60%;
+    height: 45px;
+    outline: none;
+    padding-left: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #21222D;
+    color: #FFF;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.main-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-head span {
+    gap: 20px;
+}
+
+.main-head span i {
+    font-size: 1.2em;
+    background: #21222D;
+    padding: 10px;
+    border-radius: 50%;
 }

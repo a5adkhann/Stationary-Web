@@ -60,6 +60,22 @@
     padding: 0 10px;
 }
 
+.navbar-mobile-items {
+    list-style-type: none;
+}
+
+.navbar-mobile-items li
+{
+    width: 20vw;
+    margin: 0 auto;
+    transition: background 0.4s ease-in-out; 
+    border-radius: 50px;
+}
+
+.navbar-mobile-items li:hover {
+    background: var(--red);
+}
+
 .nav-icons {
     display: flex;
     gap: 20px;
@@ -184,33 +200,74 @@
 
 .product {
     border: 1px solid var(--light-border);
-    padding: 10px 0px;
     cursor: pointer;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4)
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
+.product-text {
+    background: #EBEEEE;
+}
+
+.product-details p{
+    text-align: center;
+    padding: 0 20px;
+}
+
+.product-details p:first-child {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.product-details p:nth-child(2){
+    width: 20vw;
+}
+
+.product-circles {
+    text-align: center;
+    font-size: 25px;
+}
 
 .products .product .product-img img {
     width: 20vw;
+    padding: 0;
 }
 
 .product-price {
     font-weight: 600;
 }
 
-.add-to-cart-btn button {
-    border: none;
-    padding: 10px 20px;
-    background: var(--red);
-    color: var(--light);
-    font-size: 12px;
-    cursor: pointer;
+.product-details {
+    padding: 20px;
 }
 
-.product-details {
+.product-btn-price {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
+
+.product-btn-price div p {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.product-btn-price button {
+    border: 2px solid var(--red);
+    padding: 10px 20px;
+    color: var(--red);
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.product-btn-price button:hover {
+    border: 2px solid var(--red);
+    background: var(--red);
+    color: var(--light);
+}
+
+
 
 .product-text {
     padding: 0 10px;
@@ -218,6 +275,14 @@
 
 .products-header, .categories {
     margin-top: 20px;
+}
+
+.products-header p {
+    text-transform: uppercase;
+}
+
+.products-header p, a {
+    font-size: 1.1em;
 }
 
 marquee {
