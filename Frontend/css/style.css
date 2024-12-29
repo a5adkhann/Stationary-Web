@@ -202,6 +202,7 @@
     border: 1px solid var(--light-border);
     cursor: pointer;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    position: relative;
 }
 
 .product-text {
@@ -240,16 +241,47 @@
     padding: 20px;
 }
 
-.product-btn-price {
+.product-btn-price{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
 
+.product-price-detail {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    align-items: center;
+}
+
+.product-price-detail .product-price {
+    font-size: 35px;
+}
+
+.product-availability {
+    background: #E2F6ED;
+    box-shadow: 2px 2px 2px #E2F6ED;
+    padding: 0 10px;
+}
+
 .product-btn-price div p {
     font-weight: 600;
     font-size: 25px;
+}
+
+.add-to-cartBtnDetailPage {
+    border: 2px solid var(--red);
+    padding: 10px 100px;
+    color: var(--red);
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.add-to-cartBtnDetailPage:hover {
+    background: var(--red);
+    color: var(--light);
 }
 
 .product-btn-price button {
@@ -267,8 +299,6 @@
     color: var(--light);
 }
 
-
-
 .product-text {
     padding: 0 10px;
 }
@@ -283,6 +313,37 @@
 
 .products-header p, a {
     font-size: 1.1em;
+}
+
+.product-category {
+    position: absolute;
+    right: 0;
+    writing-mode: vertical-lr;
+    padding: 0.3em;
+    background: var(--dark);
+    color: #FFF;
+    font-size: 15px;
+}
+
+.product-detail {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-info {
+    text-align: center;
+}
+
+.product-info .product-name {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.product-info .product-description {
+    text-align: justify;
 }
 
 marquee {
@@ -358,6 +419,43 @@ marquee {
 #close-icon {
     cursor: pointer;
     font-size: 30px;
+}
+
+
+.allCartItems .cart-table {
+    border-collapse: collapse !important; 
+    text-align: center;
+    margin-top: 30px;
+}
+
+.allCartItems .cart-table tr:first-child {
+    background: #21222D;
+}
+
+.allCartItems .cart-table tr:last-child {
+    border: none;
+}
+
+.cart-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20%;
+}
+
+.cart-form button{
+    border: 2px solid var(--red);
+    padding: 5px 10px;
+    background: transparent;
+    color: var(--red);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.cart-form button:hover{
+    border: 2px solid var(--red);
+    padding: 5px 10px;
+    background: var(--red);
+    color: var(--light);
 }
 
 @media screen and (max-width: 772px){

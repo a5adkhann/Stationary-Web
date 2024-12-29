@@ -85,6 +85,7 @@ if(isset($_POST['signin'])){
 
     if($count_records > 0){
         $display = mysqli_fetch_array($result);
+        $_SESSION['user_name'] = $display['user_name'];
         $_SESSION['user_email'] = $display['user_email'];
         $_SESSION['user_password'] = $display['user_password'];
         header("location: index.php");
