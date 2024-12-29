@@ -109,8 +109,16 @@ body {
     margin-top: 20px;
 }
 
-#catSubmitBtn {
+#catSubmitBtn, #prodSubmitBtn {
     background: #21222D;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#catUpdateBtn, #prodUpdateBtn {
+    background: #171821;
     color: #FFF;
     border: none;
     padding: 10px 20px;
@@ -222,3 +230,47 @@ body {
     border-radius: 50%;
 }
 
+#model-box {
+    background: #21222D;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 800px;
+    min-width: 600px;
+    padding: 25px;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    opacity: 0;
+    z-index: -10;
+    transition: opacity 0.25s ease-in-out, z-index 0.25s ease-in-out;
+}
+
+#model-box form #catField, #prodField {
+    background: #171821;
+}
+
+#model-background.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+#model-box.active {
+    opacity: 1;
+    z-index: 11;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.button-close {
+    color: #FFF;
+    background: #171821;
+    border: none;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.button-close i {
+    font-size: 30px;
+}

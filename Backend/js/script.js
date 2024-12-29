@@ -1,5 +1,7 @@
 let sidebarLinkToggles = document.querySelectorAll(".sidebar-link-toggle");
 let dropdownItems = document.querySelectorAll(".dropdown-item");
+let modelBg = document.getElementById("model-box");
+let modelBox = document.getElementById("model-background");
 
 sidebarLinkToggles.forEach((toggle, index) => {
   toggle.classList.add("fa-arrow-right"); 
@@ -44,3 +46,62 @@ new Chart("myChart", {
     legend: {display: false}
   }
 });
+
+
+let openBtns = document.querySelectorAll(".js-open");
+openBtns.forEach((node) => {
+  node.addEventListener("click", (e) => {
+    e.preventDefault();
+    modelBg.classList.add("active");
+    modelBox.classList.add("active");
+  })
+})
+
+let closeBtns = document.querySelectorAll(".js-close");
+closeBtns.forEach((node) => {
+  node.addEventListener("click", (e) => {
+    e.preventDefault();
+    modelBg.classList.remove("active");
+    modelBox.classList.remove("active");
+  })
+})
+
+function updateCategory(checkbox, categoryId) {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+  const url = new URL(window.location.href);
+
+  if (checkbox.checked) {
+      checkboxes.forEach((cb) => {
+          if (cb !== checkbox) {
+              cb.checked = false;
+          }
+      });
+
+      url.searchParams.set('updateCategory', categoryId);
+      history.pushState(null, '', url);
+  } else {
+      url.searchParams.delete('updateCategory');
+      history.pushState(null, '', url);
+  }
+}
+
+function updateProduct(checkbox, productId) {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+  const url = new URL(window.location.href);
+
+  if (checkbox.checked) {
+      checkboxes.forEach((cb) => {
+          if (cb !== checkbox) {
+              cb.checked = false;
+          }
+      });
+
+      url.searchParams.set('updateProduct', productId);
+      history.pushState(null, '', url);
+  } else {
+      url.searchParams.delete('updateProduct');
+      history.pushState(null, '', url);
+  }
+}

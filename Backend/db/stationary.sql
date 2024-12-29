@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 29, 2024 at 11:24 AM
+-- Generation Time: Dec 29, 2024 at 05:16 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,7 +41,7 @@ CREATE TABLE `categories` (
 INSERT INTO `categories` (`category_id`, `category_name`, `category_description`, `category_image`) VALUES
 (1, 'Books', 'Books are a timeless source of knowledge, inspiration, and entertainment, offering a gateway to new ideas and perspectives. They come in various forms, including fiction, non-fiction, poetry, and academic texts, catering to diverse interests and needs. Boo', 'books.png'),
 (2, 'Pens', 'Pens are versatile writing instruments that play a vital role in communication, creativity, and documentation. Available in various types, such as ballpoint, fountain, gel, and rollerball, pens cater to different preferences and writing styles. Known for t', 'pens.png'),
-(3, 'Spray-Paint', 'Spray paints are a popular and versatile form of paint that comes in an aerosol can, allowing for smooth, even application without the need for brushes or rollers. They are widely used in art, home improvement, automotive, and industrial applications due t', 'spray-paint.png');
+(3, 'Spray-Paint', 'Spray paint is a versatile and convenient type of paint that comes in an aerosol can, making it easy to apply evenly without the need for brushes or rollers. It is widely used in art, DIY projects, automotive touch-ups, and industrial applications due to i', 'spray-paint.png');
 
 -- --------------------------------------------------------
 
@@ -64,7 +64,7 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`product_id`, `product_name`, `product_price`, `product_description`, `product_image`, `category_id`) VALUES
 (1, 'Art Pencil', '10', 'Art pencils are specialized tools used by artists, illustrators, and designers for creating detailed and expressive drawings. They come in a range of hardness levels, from soft to hard, allowing for different shading techniques, fine lines, and varied text', 'product1.jpg', 2),
-(2, 'Desk Organizers', '25', 'A desk organizer is a practical and efficient tool designed to help keep workspaces tidy and well-organized. Typically made from materials like wood, plastic, or metal, desk organizers feature compartments and sections for storing pens, paper, notebooks, g', 'product2.jpg', 1),
+(2, 'Desk Organizers', '27', 'A desk organizer is a practical and efficient tool designed to help keep workspaces tidy and well-organized. Typically made from materials like wood, plastic, or metal, desk organizers feature compartments and sections for storing pens, paper, notebooks, g', 'product2.jpg', 1),
 (3, 'Paint Brushes ', '27', 'Paint brushes are essential tools for applying paint to various surfaces, allowing for both precision and creativity in artistic and practical applications. They come in a variety of shapes, sizes, and bristle types, each designed for specific tasks, from ', 'product3.jpg', 3),
 (4, 'Office Calculators', '23', 'Office calculators are essential tools for performing a wide range of mathematical operations quickly and accurately in professional settings. They are commonly used for tasks such as basic arithmetic, budgeting, accounting, tax calculations, and financial', 'product5.jpg', 1);
 
