@@ -133,7 +133,7 @@
     cursor: pointer;
     position: relative;
     border: 1px solid var(--light-border);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4)
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 .category .category-text {
@@ -450,6 +450,10 @@ marquee {
     cursor: pointer;
     transition: background 0.3s ease-in-out;
 }
+.viewCartBtn {
+    text-decoration: none;
+    color: var(--red);
+}
 
 .cart-form button:hover{
     border: 2px solid var(--red);
@@ -457,6 +461,44 @@ marquee {
     background: var(--red);
     color: var(--light);
 }
+
+.cart-form button:hover a {
+    color: #FFF;
+}
+
+.shopping-cart {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    margin: 25px;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 7em;
+}
+
+.shopping-cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 7em;
+    border-bottom: 1px solid var(--light-border);
+}
+
+.shopping-cart-item .product-img-text-cart {
+    display: flex;
+}
+
+#quantity-increase, #quantity-decrease {
+    padding: 3px 5px;
+}
+
+.cart-actionBtn {
+    color: #FFF;
+    background: transparent;
+    padding: 3px 10px;
+}
+
+
 
 @media screen and (max-width: 772px){
     #hamburger-icon {

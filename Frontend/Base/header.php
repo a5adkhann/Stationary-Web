@@ -35,8 +35,8 @@
                         class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'products.php' ? 'active' : '')?>">
                         <a href="./products.php">Products</a>
                     </li>
-                    <li class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : '')?>">
-                        <a href="">Contact</a>
+                    <li class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'cart.php' ? 'active' : '')?>">
+                        <a href="./cart.php">Cart</a>
                     </li>
                 </ul>
             </div>
@@ -107,8 +107,9 @@
                 </table>
 
                 <form class="cart-form" method="POST" action="./cartLogic.php">
-                    <button type="submit" name="clearCart">Clear Cart</button>
                     <button type="submit" name="checkout">Checkout</button>
+                    <button><a class="viewCartBtn" href="./">View Cart</a></button>
+
                 </form>
 
             </div>
