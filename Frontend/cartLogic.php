@@ -27,10 +27,14 @@ if(isset($_POST['addToCart'])){
 }
 }
 
-if(isset($_POST['clearCart'])) { // Check if the clear cart button was pressed
-    unset($_SESSION['cart']); // Remove the cart data from session
-    echo "<script>alert('Cart has been cleared!'); location.assign('index.php');</script>";
+if(isset($_POST['checkout'])){
+    if(isset($_SESSION['cart'])){
+        foreach($_SESSION['cart'] as $key => $value){
+            
+        }
+    }
 }
+
 
 
 

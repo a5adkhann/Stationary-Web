@@ -1,3 +1,7 @@
+
+<?php
+require_once("./customerAccountsLogics.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,6 +42,23 @@
                     <li class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'cart.php' ? 'active' : '')?>">
                         <a href="./cart.php">Cart</a>
                     </li>
+
+                    <?php
+                    if(isset($_SESSION['customer_email'])){
+                    ?>
+                    <li class="nav-link">
+                        <a href="./logout.php">Logout</a>
+                    </li>
+                <?php
+                }
+                else {
+                ?>
+                <li class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'signin.php' ? 'active' : '')?>">
+                        <a href="./signin.php">Sign in</a>
+                    </li>
+<?php
+}
+?>
                 </ul>
             </div>
 
@@ -108,8 +129,7 @@
 
                 <form class="cart-form" method="POST" action="./cartLogic.php">
                     <button type="submit" name="checkout">Checkout</button>
-                    <button><a class="viewCartBtn" href="./">View Cart</a></button>
-
+                    <button><a class="viewCartBtn" href="./cart.php">View Cart</a></button>
                 </form>
 
             </div>
